@@ -25,7 +25,6 @@
   "dependencies": {
     "request": "^2.88.2",
     "fs-extra": "^8.1.0",
-    "crypto": "latest",
     "path": "^0.12.7",
     "path-exists": "^3.0.0",
     "path-is-absolute": "^1.0.1",
