@@ -1,42 +1,40 @@
-{//kkk
-  "name": "restbase-bylz",
+{
+  "name": "api-akame",
   "version": "1.1.0",
-  "description": "RUMO AOS 1K DE INSCRITOS",
-  "main": "connect.js",
+  "description": "Nothing",
+  "main": "index.js",
   "scripts": {
-    "start": "node connect.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.heroku.com/testesdolz.git"
+    "url": "git+https://git.heroku.com/base-api-akame.git"
   },
   "keywords": [
-    "whatsappbots",
-    "lzmods",
+    "simple",
+    "loli",
     "rest",
     "api"
   ],
-  "author": "lz mods",
+  "author": "Breno",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lzmodsoficial/SrLZ"
+    "url": "https://github.com/brenomakerr/akame-base-api"
   },
   "dependencies": {
-    "request": "^2.88.2",
-    "fs": "^8.1.0",
-    "fs-extra": "^8.1.0",
-    "crypto": "latest",
-    "path": "^0.12.7",
-    "textmaker-thiccy": "^1.3.1",
     "cors": "^2.8.5",
+    "hxz-api": "^1.0.1",
     "express": "^4.17.1",
+    "knights-canvas": "^1.3.7-a",
     "node-fetch": "^2.6.1",
-    "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.10",
+    "morgan": "^1.10.0",
+    "ssl-express-www": "^3.0.7",
     "canvacord": "^5.1.0",
+    "textmaker-thiccy": "^1.3.1",
+    "zrapi": "0.0.6",
     "ytdl-core": "^4.4.5",
     "yt-search": "^2.7.3"
   },
-  "homepage": "https://github.com/lzmodsoficial/SrLZ"
+  "homepage": "https://github.com/brenomakerr/akame-base-api"
 }
