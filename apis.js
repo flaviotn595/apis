@@ -1,12 +1,3 @@
-// ----- Base De Site De Api's By LZ MODS ----- \\
-// ----- Se For Postar Deixa Os Creditos ----- \\
-// ----- https://youtube.com/lzmodsofc ----- \\
-// ----- https://lzmods-api.xyz ----- \\
-// ----- https://instagram.com/kn.mito_ ----- \\
-
-// ----- Quando Bater 800 Inscritos Solto a V2 Com Varias Outras Api's ----- \\
-// ----- Nao Custa Nada Ajudar :) ----- \\
-
 let lz = process.cwd()
 
 const { download_Url } = require("./database/function");
@@ -27,8 +18,8 @@ PlayVideo,
 ytSearch
 } = require("./database/youtube");
 
-const criador = ['lzmods']; // Nome do criador
-const key = 'lz' //apikey das apis
+const criador = ['Jerfinho']; // Nome do criador
+const key = 'jg' //apikey das apis
 const keyinexistente = lz + '/paginas/keyerror.html' // html key de invalida
 
 msgs = { //MSGS DE ERROR
@@ -134,6 +125,28 @@ resultado: result
 res.json({
 msg: `erro no servidor interno`
 })})})
+
+ //[ - ///////// --- Api's Downloads --- ///////// - ]\\
+
+router.all('/download/tiktok', async (req, res) => {
+apikey = req.query.apikey;
+linkk = req.query.link;
+if(apikey !== key) return res.sendFile(keyinexistente)
+if (!linkk) return res.json({ status : false, criador : `criador`, mensagem : "Coloque o parametro: EMOJI1"})
+tiktok_api = `https://infinitybot-api.herokuapp.com/api/medias-sociais/tiktok_v2?link=${linkk}&apikey=lz`
+res.type('mp4')
+res.send(await getBuffer(tiktok_api))
+})
+
+router.all('/others/attp', async (req, res) => {
+apikey = req.query.apikey;
+txt = req.query.texto;
+if(apikey !== key) return res.sendFile(keyinexistente)
+if (!txt) return res.json({ status : false, criador : `criador`, mensagem : "Coloque Um texto Valido"})
+buffer = `https://infinitybot-api.herokuapp.com/api/medias-sociais/tiktok_v2?link=${linkk}&apikey=lz`
+res.type('webp')
+res.send(await getBuffer(buffer))
+})
 
  //[ - ///////// --- Api's Text Pro --- ///////// - ]\\
 
