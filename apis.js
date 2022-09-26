@@ -128,24 +128,28 @@ msg: `erro no servidor interno`
 
  //[ - ///////// --- Api's Downloads --- ///////// - ]\\
 
-router.all('/download/tiktok', async (req, res) => {
-apikey = req.query.apikey;
-linkk = req.query.link;
-if(apikey !== key) return res.sendFile(keyinexistente)
-if (!linkk) return res.json({ status : false, criador : `criador`, mensagem : "Coloque o parametro: EMOJI1"})
-tiktok_api = `https://infinitybot-api.herokuapp.com/api/medias-sociais/tiktok_v2?link=${linkk}&apikey=lz`
+router.all('/download/tiktok', async(req, res, next) => {
+cdapikey = req.query.apikey
+linkk = req.query.link
+if (!linkk) return res.json({ status : false, criador : `criador`, mensagem : "Coloque Um link Valido"})
+if(!cdapikey) return res.json(resposta.semkey)
+if(cdapikey !== key) return res.sendFile(keyinvalida)
+let tiktok_link = (`http://lzmods-api.tk/api/medias-sociais/tiktok_v2?link=${linkk}&apikey=lz`)
+let buffer = await getBuffer(tiktok_link)
 res.type('mp4')
-res.send(await getBuffer(tiktok_api))
+res.send(buffer)
 })
 
-router.all('/others/attp', async (req, res) => {
-apikey = req.query.apikey;
-txt = req.query.texto;
-if(apikey !== key) return res.sendFile(keyinexistente)
+router.get('/others/attp', async(req, res, next) => {
+cdapikey = req.query.apikey
+txt = req.query.texto
 if (!txt) return res.json({ status : false, criador : `criador`, mensagem : "Coloque Um texto Valido"})
-buffer = `https://infinitybot-api.herokuapp.com/api/medias-sociais/tiktok_v2?link=${linkk}&apikey=lz`
+if(!cdapikey) return res.json(resposta.semkey)
+if(cdapikey !== key) return res.sendFile(keyinvalida)
+let attp = (`https://api.xteam.xyz/attp?file&text=${txt}`)
+let buffer = await getBuffer(attp)
 res.type('webp')
-res.send(await getBuffer(buffer))
+res.send(buffer)
 })
 
  //[ - ///////// --- Api's Text Pro --- ///////// - ]\\
