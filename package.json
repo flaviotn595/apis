@@ -1,28 +1,39 @@
-{
-  "name": "api-akame",
+{//kkk
+  "name": "restbase-bylz",
   "version": "1.1.0",
-  "description": "Nothing",
-  "main": "index.js",
+  "description": "RUMO AOS 1K DE INSCRITOS",
+  "main": "connect.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node connect.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.heroku.com/base-api-akame.git"
+    "url": "git+https://git.heroku.com/testesdolz.git"
   },
   "keywords": [
-    "simple",
-    "loli",
+    "whatsappbots",
+    "lzmods",
     "rest",
     "api"
   ],
-  "author": "Breno",
+  "author": "lz mods",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brenomakerr/akame-base-api"
+    "url": "https://github.com/lzmodsoficial/SrLZ"
   },
   "dependencies": {
+  "dependencies": {
+    "request": "^2.88.2",
+    "fs-extra": "^8.1.0",
+    "crypto": "latest",
+    "path": "^0.12.7",
+    "path-exists": "^3.0.0",
+    "path-is-absolute": "^1.0.1",
+    "path-key": "^3.1.1",
+    "path-to-regexp": "^0.1.7",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
     "cors": "^2.8.5",
     "hxz-api": "^1.0.1",
     "express": "^4.17.1",
@@ -36,5 +47,5 @@
     "ytdl-core": "^4.4.5",
     "yt-search": "^2.7.3"
   },
-  "homepage": "https://github.com/brenomakerr/akame-base-api"
+  "homepage": "https://github.com/lzmodsoficial/SrLZ"
 }
